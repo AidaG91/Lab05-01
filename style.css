@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(202, 210, 197);
 }
 
 header {
@@ -11,12 +12,18 @@ header {
   padding: 1rem;
   width: 100%;
   text-transform: uppercase;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+header h1 {
+  background-color: rgb(132, 169, 140);
 }
 
 main {
   background-color: rgb(202, 210, 197);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -24,15 +31,14 @@ main {
   align-items: center;
   color: black;
   gap: 2rem;
-  padding: 2rem;
-
+  padding: 2rem 5rem;
 }
 
 .card-container {
   perspective: 1000px;
   width: 300px;
   height: 300px;
-  object-fit: cover ;
+  object-fit: cover;
 }
 
 .card-container img {
@@ -41,40 +47,39 @@ main {
   object-fit: cover;
 }
 
- .card {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 1s ease;
-    }
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
 
-    .card-container:hover .card {
-      transform: rotateY(180deg);
-    }
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
 
+.card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgb(50, 56, 47);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-    .card-face {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgb(50, 56, 47);
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
+.card-front img {
+  object-fit: cover;
+}
 
-    .card-front img {
-        object-fit: cover;
-    }
-
-    .card-back {
-     background-color: rgb(132, 169, 140);
-      color: black;
-      transform: rotateY(180deg);
-    }
+.card-back {
+  background-color: rgb(132, 169, 140);
+  color: black;
+  transform: rotateY(180deg);
+}
