@@ -24,7 +24,7 @@ main {
   background-color: rgb(202, 210, 197);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  display: flex;
+  display: flex; /* He usado flex porque es parte del ejercicio, pero creo que por diseño me hubiera gustado más grid. Aunque tal vez sea porque no sé cómo hacer para que me muestre 3 tarjetas a pantalla completa, y luego se reduzca a 2 o 1 en función del tamaño de la pantalla. Ahora mismo, en la pantalla grande me salen 4 tarjetas arriba y 2 abajo y es feo.*/
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
